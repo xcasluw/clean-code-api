@@ -18,7 +18,7 @@ describe('SignUp Controller', () => {
   })
 
   test('Should return 400 if no email is provided', () => {
-    // SUT => system under test
+    // SUT = system under test
     const sut = new SignUpController()
     const httpRequest = {
       body: {
