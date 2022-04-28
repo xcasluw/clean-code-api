@@ -16,5 +16,6 @@ module.exports = {
     '@typescript-eslint'
   ],
   rules: {
+    '@typescript-eslint/strict-boolean-expressions': 'off'
   }
 }
