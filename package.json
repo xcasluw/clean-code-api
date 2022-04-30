@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored",
-    "test": "jest --watch",
+    "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
+    "test:verbose": "jest --passWithNoTests",
+    "test:unit": "npm test -- --watch -c jest.unit.config.js",
+    "test:integration": "npm test -- --watch -c jest.integration.config.js",
+    "test:ci": "npm test -- --coverage",
     "start": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules src/server.ts"
   },
   "keywords": [],
